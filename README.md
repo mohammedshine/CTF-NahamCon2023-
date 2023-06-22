@@ -2,11 +2,12 @@ NahamCon CTF 2023 - “Red Light Green Light” - Category: AndroidDuring my par
 
 The challenge involved obtaining an Android app where a "Move" button was present. Upon pressing the button, a message would appear indicating that movement was not possible because the light was not green
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed6f7e90-11bd-4277-b8b1-3c0ee713fac8/Untitled.png)
+![Screenshot_20230621-135931 (1)](https://github.com/mohammedshine/CTF-NahamCon2023-/assets/34446299/cc9631ab-c969-4b3c-9ac8-8043e80266c1)
 
 Challenges of this nature typically require tampering with the code to modify the red light to green in order to proceed and obtain the flag. However, in this particular case, the app had security measures in place that prevented the recompilation of the modified APK, making it more difficult to bypass the intended restrictions.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8ff2baf6-c9bb-448d-ab90-8e4bd265967f/Untitled.png)
+![Untitled](https://github.com/mohammedshine/CTF-NahamCon2023-/assets/34446299/ebf27b49-593d-41f0-b5bc-24e890acc8b6)
+
 
 During Static Analysis the code seemed to declare a variable named decrypt of type Decrypt, and a boolean variable named **red** which is initially set to true.
 
@@ -26,9 +27,9 @@ Java.perform(function () {
 ```
 
 **Command:** frida -U -f com.nahamcon2023.redlightgreenlight -l redtofalse.js
+![Untitled (1)](https://github.com/mohammedshine/CTF-NahamCon2023-/assets/34446299/67e916b2-349e-4bcd-a8ad-fba359b4773c)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed491502-f6f1-4af2-9a7b-1c1818ff9ef8/Untitled.png)
 
 Logic Bypassed
+![Screenshot_20230621-142246](https://github.com/mohammedshine/CTF-NahamCon2023-/assets/34446299/1d2ade4e-4199-4785-9dd7-777ff4a6fb55)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/34d86154-74c5-4896-b3bf-a069a2144708/Untitled.png)
